@@ -1,0 +1,22 @@
+CROSS_HOST="x86_64-w64-mingw32"
+inherit cross
+
+NAME="mingw64-x86_64-hicolor-icon-theme"
+VERSION=0.12
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="Default fallback icon theme for Win64 toolchain"
+DESCRIPTION="This is the default fallback theme used by implementations of
+the icon theme specification."
+HOMEPAGE="http://icon-theme.freedesktop.org/wiki/HicolorTheme"
+SRC_URI="http://icon-theme.freedesktop.org/releases/hicolor-icon-theme-${VERSION}.tar.gz"
+SRC_DIR="hicolor-icon-theme-${VERSION}"
+
+src_compile() { :; }
+
+# make install just creates a bunch of empty directories which we need not keep
+src_install() {
+	cd ${S}
+	insinto ${CROSS_DATADIR}/icons/hicolor
+	doins index.theme
+}
