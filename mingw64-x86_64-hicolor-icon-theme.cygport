@@ -2,14 +2,14 @@ CROSS_HOST="x86_64-w64-mingw32"
 inherit cross
 
 NAME="mingw64-x86_64-hicolor-icon-theme"
-VERSION=0.12
+VERSION=0.15
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="Default fallback icon theme for Win64 toolchain"
 DESCRIPTION="This is the default fallback theme used by implementations of
 the icon theme specification."
-HOMEPAGE="http://icon-theme.freedesktop.org/wiki/HicolorTheme"
-SRC_URI="http://icon-theme.freedesktop.org/releases/hicolor-icon-theme-${VERSION}.tar.gz"
+HOMEPAGE="https://www.freedesktop.org/wiki/Software/icon-theme"
+SRC_URI="http://icon-theme.freedesktop.org/releases/hicolor-icon-theme-${VERSION}.tar.xz"
 SRC_DIR="hicolor-icon-theme-${VERSION}"
 
 src_compile() { :; }
